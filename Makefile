@@ -7,15 +7,10 @@ gqlgen:
 .PHONY: gqlgen
 
 serve:
-	@echo "start server"
-	@cd app $(GO) run ./main.go
-.PHONY: serve
-
-devserver:
 	@echo "start devserver"
 	@cd app && dev_appserver.py app.yaml
-.PHONY: devserver
+.PHONY: serve
 
 deploy:
-	cd app && gcloud app deploy --project keywords-server
+	$ appcfg.py update --application=keywords-server --version=1 --oauth2_access_token=$(gcloud auth print-access-token 2> /dev/null) app/app.yaml
 .PHONY: deploy

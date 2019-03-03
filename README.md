@@ -13,3 +13,7 @@
 gcloud auth login
 gcloud config set project keywords-server
 ```
+
+#### Deploy
+
+`gcloud deploy` has a problem: https://qiita.com/castaneai/items/d8453d4297282f172e96

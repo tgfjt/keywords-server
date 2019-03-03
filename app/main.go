@@ -20,7 +20,7 @@ func main() {
 	http.Handle("/playground", handler.Playground("GraphQL playground", "/query"))
 	http.Handle("/query", handler.GraphQL(keywords_server.NewExecutableSchema(keywords_server.Config{Resolvers: &keywords_server.Resolver{}})))
 
-	log.Printf("connect to http://localhost:%s/ for GraphQL playground", port)
+	log.Printf("connect to http://localhost:%s/ for GraphQL playground", "8080")
 	appengine.Main()
 }
 
