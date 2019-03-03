@@ -1,0 +1,36 @@
+type Keyword {
+  id: ID!
+  text: String!
+  user: User!
+}
+
+type Tag {
+  id: ID!
+  text: String!
+  user: User!
+}
+
+type User {
+  id: ID!
+  name: String!
+}
+
+type Query {
+  keywords: [Keyword!]!
+  tags: [Tag!]!
+}
+
+input NewKeyword {
+  text: String!
+  userId: String!
+}
+
+input NewTag {
+  text: String!
+  userId: String!
+}
+
+type Mutation {
+  createKeyword(input: NewKeyword!): Keyword!
+  createTag(input: NewTag!): Tag!
+}

@@ -1,0 +1,19 @@
+# .gqlgen.yml example
+#
+# Refer to https://gqlgen.com/config/
+# for detailed .gqlgen.yml documentation.
+
+schema:
+- schema.graphql
+exec:
+  filename: generated.go
+models:
+  Tag:
+    model: github.com/tgfjt/keywords-server/src/models.Tag
+  User:
+    model: github.com/tgfjt/keywords-server/src/models.User
+  Keyword:
+    model: github.com/tgfjt/keywords-server/src/models.Keyword
+resolver:
+  filename: resolver.go
+  type: Resolver
