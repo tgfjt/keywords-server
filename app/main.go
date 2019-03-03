@@ -6,7 +6,7 @@ import (
 	"net/http"
 
 	"github.com/99designs/gqlgen/handler"
-	"github.com/tgfjt/keywords-server/app"
+	"github.com/tgfjt/keywords-server/src"
 	"google.golang.org/appengine"
 )
 
